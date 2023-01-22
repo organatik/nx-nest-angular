@@ -8,10 +8,12 @@ import {
   PostgresConfiguration,
   postgresConfiguration,
 } from '@b2x/api/utils-config';
+import { ApiFeatureUserModule } from '@b2x/api/feature-user';
 
 @Module({
   imports: [
     ApiFeatureConfigModule,
+    ApiFeatureUserModule,
     TypeOrmModule.forRootAsync({
       inject: [postgresConfiguration.KEY],
       useFactory: (config: PostgresConfiguration) => {
