@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@b2x/api/feature-config": ["libs/api/feature-config/src/index.ts"],
+      "@b2x/api/utils-config": ["libs/api/utils-config/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
