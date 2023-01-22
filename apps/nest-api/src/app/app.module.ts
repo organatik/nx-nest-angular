@@ -1,7 +1,4 @@
 import { Module } from '@nestjs/common';
-
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ApiFeatureConfigModule } from '@b2x/api/feature-config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {
@@ -31,7 +28,7 @@ import { ApiFeatureUserModule } from '@b2x/api/feature-user';
       },
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
