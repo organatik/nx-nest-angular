@@ -61,6 +61,17 @@
         "proxyConfig": "apps/client/proxy.conf.json"
       }
     },
+    "serve-all" : {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands":  [
+          "nx serve nest-api",
+          "nx serve client",
+          "docker-compose up"
+        ],
+        "parallel": true
+      }
+    },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
