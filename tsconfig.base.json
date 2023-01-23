@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@b2x/api/data-access-dtos": ["libs/api/data-access-dtos/src/index.ts"],
       "@b2x/api/data-access-user": ["libs/api/data-access-user/src/index.ts"],
       "@b2x/api/feature-config": ["libs/api/feature-config/src/index.ts"],
       "@b2x/api/feature-user": ["libs/api/feature-user/src/index.ts"],
