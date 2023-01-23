@@ -33,6 +33,12 @@
               "maximumError": "4kb"
             }
           ],
+          "fileReplacements": [
+            {
+              "replace": "apps/client/src/environments/environment.ts",
+              "with": "apps/client/src/environments/environment.prod.ts"
+            }
+          ],
           "outputHashing": "all"
         },
         "development": {
@@ -41,7 +47,13 @@
           "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
-          "namedChunks": true
+          "namedChunks": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/client/src/environments/environment.prod.ts",
+              "with": "apps/client/src/environments/environment.ts"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"
@@ -61,10 +73,10 @@
         "proxyConfig": "apps/client/proxy.conf.json"
       }
     },
-    "serve-all" : {
+    "serve-all": {
       "executor": "nx:run-commands",
       "options": {
-        "commands":  [
+        "commands": [
           "nx serve nest-api",
           "nx serve client",
           "docker-compose up"

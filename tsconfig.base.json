@@ -19,7 +19,10 @@
       "@b2x/api/data-access-user": ["libs/api/data-access-user/src/index.ts"],
       "@b2x/api/feature-config": ["libs/api/feature-config/src/index.ts"],
       "@b2x/api/feature-user": ["libs/api/feature-user/src/index.ts"],
-      "@b2x/api/utils-config": ["libs/api/utils-config/src/index.ts"]
+      "@b2x/api/utils-config": ["libs/api/utils-config/src/index.ts"],
+      "@b2x/client/data-access-api": [
+        "libs/client/data-access-api/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
