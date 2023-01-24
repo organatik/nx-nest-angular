@@ -22,6 +22,9 @@
       "@b2x/api/utils-config": ["libs/api/utils-config/src/index.ts"],
       "@b2x/client/data-access-api": [
         "libs/client/data-access-api/src/index.ts"
+      ],
+      "@b2x/client/feature-register": [
+        "libs/client/feature-register/src/index.ts"
       ]
     }
   },
