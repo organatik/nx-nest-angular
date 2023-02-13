@@ -6,8 +6,8 @@ services:
       dockerfile: DockerfileClient
     ports:
       - "8080:80"
-    depends_on:
-      - backend
+#    depends_on:
+#      - backend
 
 #  backend:
 #    build:
