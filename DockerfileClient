@@ -36,8 +36,6 @@ COPY ../../package-lock.json ./
 RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
 RUN npm install --only=production
 
-RUN ls ./dist -alh
-
 RUN rm package*.json
 
 
