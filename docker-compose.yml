@@ -6,43 +6,43 @@ services:
       dockerfile: DockerfileClient
     ports:
       - "8080:80"
-#    depends_on:
-#      - backend
+    depends_on:
+      - backend
 
-#  backend:
-#    build:
-#      context: .
-#      dockerfile: DockerfileApi
-#    container_name: nestjs-api
-#    environment:
-#      - PORT=3000
-#      - POSTGRES_HOST=postgres
-#    ports:
-#      - '3000:3000'
-#    depends_on:
-#      - postgres
-#    networks:
-#      - nestjs-network
-#
-#  postgres:
-#    container_name: b2x-postgres
-#    image: postgres:latest
-#    environment:
-#      - POSTGRES_USER=b2x-admin
-#      - POSTGRES_PASSWORD=b2x-password
-#      - PGDATA=/data/postgres
-#      - POSTGRES_PORT=5432
-#    volumes:
-#      - postgres-db:/data/postgres
-#    ports:
-#      - '5432:5432'
-#    networks:
-#      - nestjs-network
-#
-#
-#volumes:
-#  postgres-db:
-#    driver: local
-#networks:
-#  nestjs-network:
-#    driver: bridge
+  backend:
+    build:
+      context: .
+      dockerfile: DockerfileApi
+    container_name: nestjs-api
+    environment:
+      - PORT=3000
+      - POSTGRES_HOST=postgres
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    networks:
+      - nestjs-network
+
+  postgres:
+    container_name: b2x-postgres
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=b2x-admin
+      - POSTGRES_PASSWORD=b2x-password
+      - PGDATA=/data/postgres
+      - POSTGRES_PORT=5432
+    volumes:
+      - postgres-db:/data/postgres
+    ports:
+      - '5432:5432'
+    networks:
+      - nestjs-network
+
+
+volumes:
+  postgres-db:
+    driver: local
+networks:
+  nestjs-network:
+    driver: bridge
